@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BIRDS</title>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link href="css/birds.css" rel="stylesheet" />
+		<link href="css/rain.css" rel="stylesheet" />
+	<script src="js/birdmove.js" type="text/javascript" language="JavaScript"></script>
+	<script src="js/numbers.js" type="text/javascript" language="JavaScript"></script>
+	<script src="js/eating.js" type="text/javascript" language="JavaScript"></script>
+
+	<script>
+
+	function rain(){
+		$('#container_rain').append('<div id="cloud"></div><div id="drop_container"></div>');
+		makeDrop(150, randomInt(1, 280));
+		makeRain(150, 150);
+
+		function makeRain(num, speed) {
+			if (num > 0) {
+				setTimeout(function () {
+					$('#drop_' + randomInt(1, 150)).addClass('animate');
+					num--;
+					makeRain(num, speed);
+				}, speed);
+			}
+		};
+
+		function makeDrop(num, position) {
+			if (num > 0) {
+				var drop = '<div class="drop heart" id="drop_' + num + '"></div>';
+
+				$('#drop_container').append(drop);
+				$('#drop_' + num).css('left', position);
+				num--;
+				makeDrop(num, randomInt(1, 280));
+			}
+		};
+
+		function randomInt(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) + min);
+		};
+	}
+	rain();
+	</script>
+</head>
+
+<body>
+
+	<div align="center" class="fin">
+		<div id="container_rain"></div>
+	</div>
+
+</body>
+</html>

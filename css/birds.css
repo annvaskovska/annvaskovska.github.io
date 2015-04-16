@@ -1,0 +1,530 @@
+
+@font-face {
+	font-family: PHRegularCaps; /* Гарнитура шрифта */
+	src: url(fonts/PHRegularCaps.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: CaviarDreams; /* Гарнитура шрифта */
+	src: url(fonts/CaviarDreams.ttf); /* Путь к файлу со шрифтом */
+}
+
+body, html{
+	font-family: CaviarDreams, 'Comic Sans MS', cursive;
+	line-height: 1.2;
+	font-size: 1.2em;
+	background-color: #FFFFFF;
+	left: 0;
+	height: 100%;
+	overflow:hidden;  
+}
+
+.fin{
+	height: 100%;
+}
+
+#container_rain{
+	height: 100%;
+}
+
+.congrats{
+	background-color: #00BCD4;
+	margin: 0 0 0 0;
+}
+
+.buttom{
+	position: relative;
+	z-index: 11;
+}
+
+#buttom {
+	user-select: none; /* убирать выделение текста */
+	outline: none; /* убирать контур в Mozilla */
+} 
+
+.buttom:hover
+{
+	-webkit-animation: swing 2s ease;
+	animation: swing 2s ease;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+h2{
+	color: #c62828;
+}
+
+h4{
+	margin: 0 0 0 0 ;
+	line-height: 1.2;
+	font-size: 1.3em;
+	color: white;
+	vertical-align: center;
+	text-align: center;
+	opacity: 1;
+
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	-o-filter: blur(0px);
+	-ms-filter: blur(0px);
+	filter: blur(0px);
+}
+
+h5{
+	margin: 5px;
+	font-family: CaviarDreams, 'Comic Sans MS', cursive;
+	font-size: 0.8em;
+	line-height: 0.9;
+}
+
+.text{
+	position: relative;
+
+	left: 0;
+	height: 80%;
+	width: 70%;
+	margin: 0 15% 0 15%;
+	overflow:hidden; 
+
+}
+
+
+
+.congrats{
+	background-color: #FFFFFF;
+	display: block;
+	position: absolute;
+	overflow:hidden;  
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0 0 50px 0;
+	z-index: 10;
+}
+.container{
+	transition: all 3s;
+	background-color: #00BCD4;
+	display: block;
+	position: absolute;
+	overflow:hidden;  
+	left: 0;
+	right: 0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	margin: 0 0 0 0;
+}
+
+.background {
+	
+	display: block;
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0 0;
+	padding: 0 0;
+	overflow:hidden; 
+	z-index: 1; 
+	margin: 0 0 0 0;
+	background: url('img/clouds1000.png') repeat-x, url('img/clouds1200_1.png') repeat-x 0 0;
+	-webkit-animation: wind 40s linear infinite;
+	-moz-anumation: wind 40s linear infinite;
+	-o-animation: wind 40s linear infinite;
+	animation: wind 40s linear infinite;
+}
+
+.night{
+	
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0 0;
+	padding: 0 0;
+	margin: 0 0 0 0;
+	overflow:hidden;  
+	visibility: hidden;
+}
+
+.numbers{
+	
+	display: block;
+	position: absolute;
+	overflow:hidden;  
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	margin: 50px 0 50px 0;
+}
+
+
+
+.player{
+	display: block;
+
+}
+
+#player{
+	height: 142px;
+	width: 180px;
+	position:absolute;
+	left:60px;
+	top:150px;
+	z-index: 5;
+
+}
+
+.red{
+	color: #c62828;
+}
+.blue{
+	color: #1a237e;
+}
+.purple{
+	color: #6200ea;
+}
+.yellow{
+	color: yellow;
+	text-shadow: 1px 1px 1px black;
+}
+.num0,.num1,.num2,.num3,.num4,.num5,.num6,.num7,.num8,.num9,
+.numNegative0,.numNegative1,.numNegative2,.numNegative3,.numNegative4,.numNegative5,.numNegative6,.numNegative7,.numNegative8,.numNegative9{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	z-index: 4;
+}
+
+
+.numBlue0,.numBlue1,.numBlue2,.numBlue3,.numBlue4,.numBlue5,.numBlue6,.numBlue7,.numBlue8,.numBlue9{
+
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	z-index: 4;
+
+	background: #1a237e;
+
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+
+	box-shadow: 0 0 10px rgba(26, 35, 126,0.5); 
+
+}
+.numPurple0,.numPurple1,.numPurple2,.numPurple3,.numPurple4,.numPurple5,.numPurple6,.numPurple7,.numPurple8,.numPurple9{
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	z-index: 4;
+
+
+	background: #6200ea;
+
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+
+	box-shadow: 0 0 10px rgba(98,0,234,0.5); 
+
+}
+
+.numRed0,.numRed1,.numRed2,.numRed3,.numRed4,.numRed5,.numRed6,.numRed7,.numRed8,.numRed9{
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	z-index: 4;
+	color: #c62828;
+
+	background: #c62828;
+
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+
+	box-shadow: 0 0 10px rgba(198,40,40,0.5); 
+}
+
+.numYellow0,.numYellow1,.numYellow2,.numYellow3,.numYellow4,.numYellow5,.numYellow6,.numYellow7,.numYellow8,.numYellow9{
+	position: absolute;
+	Yellow	height: 40px;
+	width: 40px;
+	z-index: 4;
+	color: #c62828;
+
+
+	background: yellow;
+
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+
+	box-shadow: 0 0 10px rgba(198,40,40,0.5); 
+}
+
+
+#eatme{
+
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	background-color: red;
+}
+
+.thief{
+	height: 142px;
+	width: 180px;
+	position:absolute;
+	left:-200px;
+	top:-200px;
+	z-index: 5;
+}
+.score{
+	position: absolute;
+	left: 80%; 
+	top: -80px;
+	width: 160px;
+	height: 160px;
+	background: white;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 80px;
+	z-index: 4;
+}
+.score:hover{
+	-moz-border-radius: 80px;
+	-webkit-border-radius: 80px;
+	border-radius: 80px;
+
+	box-shadow: 0 0 15px white;
+}
+
+.score h{
+	position: relative;
+	left: 40%;
+	top: 60%;
+	vertical-align: center;
+	text-align: center;
+	z-index: 4;
+
+}
+
+
+#modal_form {
+	width: 800px; 
+	height: 400px; /* Размеры должны быть фиксированы */
+	border-radius: 5px;
+	border: 3px #000 solid;
+	background: #fff;
+	position: fixed; /* чтобы окно было в видимой зоне в любом месте */
+	top: 30%; /* отступаем сверху 45%, остальные 5% подвинет скрипт */
+	left: 30%; /* половина экрана слева */
+	margin-top: -150px;
+	margin-left: -150px; 
+	display: none; /* в обычbном состоянии окна не должно быть */
+	opacity: 0; /* полностью прозрачно для анимирования */
+	z-index: 10; /* окно должно быть наиболее большем слое */
+	padding: 20px 10px;
+
+}
+/* Кнопка закрыть для тех кто в танке) */
+#modal_form #modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+/* Подложка */
+#overlay {
+	z-index: 9; /* подложка должна быть выше слоев элементов сайта, но ниже слоя модального окна */
+	position: fixed; /* всегда перекрывает весь сайт */
+	background-color: #000; /* черная */
+	opacity: 0.8; /* но немного прозрачна */
+	width: 100%; 
+	height: 100%; /* размером во весь экран */
+	top: 0; 
+	left: 0; /* сверху и слева 0, обязательные свойства! */
+	cursor: pointer;
+	display: none; /* в обычном состоянии её нет) */
+}
+form h3{
+	color: rgb(212,75,56);
+}
+#finpicture{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+	margin-right: 0px;	
+}
+
+.star{
+	position: absolute;
+	z-index: 0;
+	opacity: 0.7;
+}
+
+#star {
+	margin: 6px 0;
+	position: relative;
+	display: block;
+	color: red;
+	width: 0px;
+	height: 0px;
+	border-right:  12px solid transparent;
+	border-bottom: 9px  solid #FFEB3B;
+	border-left:   12px solid transparent;
+	-moz-transform:    rotate(35deg);
+	-webkit-transform: rotate(35deg);
+	-ms-transform:     rotate(35deg);
+	-o-transform:      rotate(35deg);
+}
+#star:before {
+	border-bottom: 10px solid #FFEB3B;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: -6px;
+	left: -7px;
+	display: block;
+	content: '';
+	-webkit-transform: rotate(-35deg);
+	-moz-transform:    rotate(-35deg);
+	-ms-transform:     rotate(-35deg);
+	-o-transform:      rotate(-35deg);
+
+}
+#star:after {
+	position: absolute;
+	display: block;
+	color: red;
+	
+	left: -12px;
+	width: 0px;
+	height: 0px;
+	border-right: 12px solid transparent;
+	border-bottom:9px solid #FFEB3B;
+	border-left: 12px solid transparent;
+	-webkit-transform: rotate(-70deg);
+	-moz-transform:    rotate(-70deg);
+	-ms-transform:     rotate(-70deg);
+	-o-transform:      rotate(-70deg);
+	content: '';
+}
+/*
+@-webkit-keyframes wind {
+	0% {background-position: 1200px 250px,1000px 50px, left top}
+	50% {background-position:  600px 450px,500px 10px, left top;}
+	100% {background-position: 0px 150px, 0px 50px,left top;}
+	
+}
+*/
+
+@-webkit-keyframes wind {
+	0% {background-position: 100% 100%}
+	25% {background-position:  25% 70%}
+	75% {background-position:  -25% -35%}
+	100% {background-position: 100% 100%}
+	
+}
+
+@-moz-keyframes wind {
+	0% {background-position: 100% 100%}
+	25% {background-position:  25% 70%}
+	75% {background-position:  -25% 35%}
+	100% {background-position: 100% 100%}
+	
+}
+
+
+@-o-keyframes wind {
+	0% {background-position: 100% 100%}
+	25% {background-position:  25% 70%}
+	75% {background-position:  -25% 35%}
+	100% {background-position: 100% 100%}
+	
+}
+
+@keyframes wind {
+	0% {background-position: 100% 100%}
+	25% {background-position:  25% 70%}
+	75% {background-position:  -25% 35%}
+	100% {background-position: 100% 100%}
+}
+@-webkit-keyframes swing
+{
+	15%
+	{
+		-webkit-transform: translateX(9px);
+		transform: translateX(9px);
+	}
+	30%
+	{
+		-webkit-transform: translateX(-9px);
+		transform: translateX(-9px);
+	} 
+	40%
+	{
+		-webkit-transform: translateX(6px);
+		transform: translateX(6px);
+	}
+	50%
+	{
+		-webkit-transform: translateX(-6px);
+		transform: translateX(-6px);
+	}
+	65%
+	{
+		-webkit-transform: translateX(3px);
+		transform: translateX(3px);
+	}
+	100%
+	{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@keyframes swing
+{
+	15%
+	{
+		-webkit-transform: translateX(9px);
+		transform: translateX(9px);
+	}
+	30%
+	{
+		-webkit-transform: translateX(-9px);
+		transform: translateX(-9px);
+	}
+	40%
+	{
+		-webkit-transform: translateX(6px);
+		transform: translateX(6px);
+	}
+	50%
+	{
+		-webkit-transform: translateX(-6px);
+		transform: translateX(-6px);
+	}
+	65%
+	{
+		-webkit-transform: translateX(3px);
+		transform: translateX(3px);
+	}
+	100%
+	{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
