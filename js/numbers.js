@@ -17,7 +17,7 @@ $(document).ready(function (event) {
 
 
 	var mainAudio = document.getElementsByTagName("audio")[15];
-	mainAudio.play();
+	//mainAudio.play();
 
 	var finAudio = document.getElementsByTagName("audio")[16];
 
