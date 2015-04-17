@@ -10,7 +10,7 @@ window.onblur = function () {
 
 }
 window.onfocus = function () {
-	document.title='Birds'
+	document.title='Голуби и числа'
 	Totalflag=true;
 	$(".icono-pause").removeClass("icono-pause").addClass("icono-play")
 }
@@ -199,7 +199,7 @@ $(document).ready(function (event) {
 			if($('.num' + i).length > 0){
 				if(collides(i)){
 					score+=i;
-					if(score>250){
+					if(score>249){
 						score = 0;
 						Totalflag = false;
 						$('.numbers').html('');

@@ -102,6 +102,12 @@ h5{
 	margin: 0 0 50px 0;
 	z-index: 10;
 }
+
+#sound{
+	z-index: 9;
+	position: absolute;
+	left: 30px;
+}
 .container{
 	transition: all 3s;
 	background-color: #00BCD4;
@@ -286,9 +292,7 @@ h5{
 	top:-200px;
 	z-index: 5;
 }
-#sound, #pause{
-	z-index: 9;
-}
+
 .score{
 	position: absolute;
 	left: 80%; 
