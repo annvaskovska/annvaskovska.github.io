@@ -49,8 +49,12 @@ body, html{
 	-webkit-animation-iteration-count: 1;
 	animation-iteration-count: 1;
 }
+h1{
+	margin: 10px 0 0 0;
+}
 h2{
 	color: #c62828;
+	margin: 10px 0 10px 0;
 }
 
 h4{
@@ -73,16 +77,14 @@ h5{
 	margin: 5px;
 	font-family: CaviarDreams, 'Comic Sans MS', cursive;
 	font-size: 0.8em;
-	line-height: 0.9;
+	line-height: 1.2;
 }
 
 .text{
 	position: relative;
-
 	left: 0;
-	height: 80%;
-	width: 70%;
-	margin: 0 15% 0 15%;
+	width: 82%;
+	margin: 0 11% 0 11%;
 	overflow:hidden; 
 
 }
