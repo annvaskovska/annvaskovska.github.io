@@ -138,7 +138,7 @@ h5{
 	overflow:hidden; 
 	z-index: 1; 
 	margin: 0 0 0 0;
-	background: url('img/clouds1000.png') repeat-x, url('img/clouds1200_1.png') repeat-x 0 0;
+	background: url('img/clouds1000.png') repeat-x, url('img/clouds1200_1.png')  repeat-y 0 0, url('img/clouds1200_2.png') repeat-x 0 0;
 	-webkit-animation: wind 40s linear infinite;
 	-moz-anumation: wind 40s linear infinite;
 	-o-animation: wind 40s linear infinite;
