@@ -199,7 +199,7 @@ $(document).ready(function (event) {
 			if($('.num' + i).length > 0){
 				if(collides(i)){
 					score+=i;
-					if(score>0){
+					if(score>250){
 						score = 0;
 						Totalflag = false;
 						$('.numbers').html('');
