@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<link href="css/birds.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/icono.min.css">
 	<script src="js/birdmove.js" type="text/javascript" language="JavaScript"></script>
 	<script src="js/numbers.js" type="text/javascript" language="JavaScript"></script>
 	
@@ -23,7 +24,7 @@
 	<audio><source src="sound/2-woohoo.mp3"></source></audio>
 	<audio><source src="sound/2-woohoo.mp3"></source></audio>
 	
-	<audio><source src="sound/fon.mp3"></audio>
+	<audio loop><source src="sound/fon.mp3"></audio>
 	<audio><source src="sound/fin.mp3"></source></audio>
 
 
@@ -67,6 +68,10 @@
 </div>
 </div>
 <div class="container">
+	<div>
+		<div class="icono-volumeHigh" id='sound'></div>
+		<div class="icono-pause" id='pause'></div>
+	</div>
 	<div class="score" id="score">
 		<h> 0 </h>
 	</div>
@@ -86,7 +91,7 @@
 
 
 
-<div id="modal_form">
+<div id="modal_form" style="top:0">
 	<span id="modal_close">X</span>
 	<form action="" method="post">
 		<div ALIGN="CENTER">

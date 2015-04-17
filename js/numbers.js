@@ -5,11 +5,14 @@ var Totalflag=false;
 
 window.onblur = function () {
 	document.title='Вернись!'
+	$(".icono-play").removeClass("icono-play").addClass("icono-pause");
 	Totalflag=false;
+
 }
 window.onfocus = function () {
 	document.title='Birds'
 	Totalflag=true;
+	$(".icono-pause").removeClass("icono-pause").addClass("icono-play")
 }
 
 
@@ -17,9 +20,32 @@ $(document).ready(function (event) {
 
 
 	var mainAudio = document.getElementsByTagName("audio")[15];
-	//mainAudio.play();
+	mainAudio.play();
 
 	var finAudio = document.getElementsByTagName("audio")[16];
+
+	$('#sound').click( function(){ 
+		if($('#sound').hasClass('icono-volumeHigh')){
+			$(".icono-volumeHigh").removeClass("icono-volumeHigh").addClass("icono-volume")
+			mainAudio.pause();
+		}
+		else {
+			$(".icono-volume").removeClass("icono-volumeHigh").addClass("icono-volumeHigh");
+			mainAudio.play();
+		}
+	});
+
+	$('#pause').click( function(){ 
+		if($('#pause').hasClass('icono-pause')){
+			$(".icono-pause").removeClass("icono-pause").addClass("icono-play")
+			Totalflag=false;
+			$(".numbers").html('');
+		}
+		else {
+			$(".icono-play").removeClass("icono-play").addClass("icono-pause");
+			Totalflag=true;
+		}
+	});
 
 
 	$('#modal_close, #overlay').click( function(){ 
@@ -28,10 +54,17 @@ $(document).ready(function (event) {
 			function(){ 
 				$(this).css('display', 'none'); 
 				$('#overlay').fadeOut(400); 
-				mainAudio.play();
+
 				finAudio.pause();
+				finAudio.currentTime = 0;
 				Totalflag=true;
-				
+				if($('#sound').hasClass('icono-volumeHigh')){
+					mainAudio.play();
+				}
+				else {
+					mainAudio.pause();
+				}
+
 			}
 			);
 	});
@@ -166,13 +199,15 @@ $(document).ready(function (event) {
 			if($('.num' + i).length > 0){
 				if(collides(i)){
 					score+=i;
-					if(score>500){
+					if(score>0){
 						score = 0;
+						Totalflag = false;
+						$('.numbers').html('');
 						$('#overlay').fadeIn(400, 
 							function(){ 
 								$('#modal_form') 
 								.css('display', 'block') 
-								.animate({opacity: 1, top: '50%'}, 200); 
+								.animate({opacity: 1, top: '25%'}, 200); 
 								mainAudio.pause();
 								finAudio.play();
 								flag=false;
@@ -190,7 +225,7 @@ $(document).ready(function (event) {
 						var addNumbers = setInterval(adding, lavel*50)
 						clearInterval(addNegativeNumbers);
 						var addNegativeNumbers = setInterval(addingNegative, lavel*50)
-						console.log('nnew lavel!' + lavel)
+						console.log('new lavel!' + lavel)
 					}
 					*/
 					
@@ -402,20 +437,17 @@ function movethief(elem){
 			if($('.num' + i).length > 0){
 				if(collidesThief(i)){
 					$('.num' + i).css('width','150').css('height', '150').css('opacity', '0.1');
-
 				}
 
 				if($('.numBlue' + i).length > 0){
 					if(collidesThiefColor($('.numBlue' + i))){
 						$('.numBlue' + i).css('width','150').css('height', '150').css('opacity', '0');
-						console.log('collided blue');
 					}
 				}
 
 				if($('.numPurple' + i).length > 0){
 					if(collidesThiefColor($('.numPurple' + i))){
 						$('.numPurple' + i).css('width','150').css('height', '150').css('opacity', '0');
-						console.log('collided Purpure');
 					}
 				}
 
