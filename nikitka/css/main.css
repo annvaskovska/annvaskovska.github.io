@@ -1,0 +1,72 @@
+@font-face {
+	font-family: BRegular;
+	src: url(font/b.otf);
+}
+html,
+body,
+p {
+	font-family: BRegular, 'Times New Roman', cursive;
+	font-size: 20pt;
+	margin: 0;
+}
+html {
+	height: 100%;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar {
+	display: none;
+}
+.control {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	height: 40px;
+	width: 40px;
+	opacity: 0.3;
+}
+.control-up {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	height: 40px;
+	width: 40px;
+	opacity: 0.1;
+}
+.control:hover, 
+.control-up:hover {
+	opacity: 0.6;
+}
+.next {
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	border-top: 18px solid transparent;
+	border-bottom: 18px solid transparent;
+	border-left: 30px solid #000;
+}
+
+.up {
+	position: absolute;
+	top: 5px;
+	left: 2px;
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	border-bottom: 30px solid black;
+}
+
+.space {
+	padding-bottom: 15%;
+}
+.in {
+	height: 100%;
+	width: 100%;
+}
+img {
+	margin-top: 15%;
+	width: 400px;
+	height: auto;
+}
+.cosmos {
+	background: url('../img/kosmos.jpeg');
+	color: white;
+}
