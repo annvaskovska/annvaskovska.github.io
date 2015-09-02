@@ -1,0 +1,92 @@
+@font-face {
+    font-family: Drugs;
+    src: url(../fonts/Drugs.otf);
+}
+
+body {
+    margin: 0px;
+    background: url('../img/kpi.jpg') no-repeat fixed;
+    background-size: 100%;
+    font-family: Drugs;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #233230;
+}
+
+.header {
+    margin-bottom: 0px;
+    padding-top: 30px;
+    font-size: 6em;
+    line-height: 1em;
+    color: white;
+    font-weight: bold;
+    /*font-family: SAM_TOWN;*/
+}
+
+.under-header {
+    line-height: 1em;
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+}
+
+span {
+    cursor: pointer;
+    color: #50837D;
+}
+
+input[type=checkbox] {
+    position: absolute !important;
+    margin-top: 34px !important;
+    margin-left: 30px !important;
+}
+
+.task-header {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    padding-left: 25px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.tasks {
+    padding-left: 56px;
+    margin-bottom: 20px;
+}
+
+.content {
+    width: 1140px;
+    max-width: 90%;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
+    background-color: rgba(1, 1, 1, 0.1);
+}
+
+.task {
+    background-color: rgba(255, 255, 255, 0.85);
+    height: auto; /*200px;*/
+    margin-bottom: 2px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.share {
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .task {
+        /*width: 100% !important;*/
+        height: auto;
+    }
+    body {
+        background-size: auto;
+    }
+}
