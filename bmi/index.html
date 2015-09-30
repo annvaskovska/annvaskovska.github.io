@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>ІМТ</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div class="content">
+		<div class="header">
+			<p class="header-text">Калькулятор для визначення індексу маси тіла</p>
+		</div>
+		<div class="input">
+			<p class="input-text">Вхідні дані</p>
+			<div class="input-height">
+				<span class="span-height">Зріст(в см):</span>
+				<input type="text" name="input-height" id="height" />
+			</div>
+			<div class="input-weight">
+				<span class="span-weight">Вага(в кг):</span>
+				<input type="text" name="input-weight" id="weight" />
+			</div>
+
+			<div class="calculate">
+				<button class="calculate-button" id="calculate">Розрахувати</button>
+			</div>
+			<div class="result">
+				<p id="result">Тут буде показано ваш ІМТ</p>
+			</div>
+		</div>
+
+		<div class="table">
+			<table>
+				<thead>
+					<tr class="table-first">
+						<td>Індекс маси</td>
+						<td>Класифікація</td>
+					</tr>
+				</thead>
+				<tbody id="table">
+					<tr id="node1">
+						<td>Менше 18.5</td>
+						<td>Недостатня маса</td>
+					</tr>
+					<tr id="node2">
+						<td>18.5 - 24.9</td>
+						<td>Норма</td>
+					</tr>
+					<tr id="node3">
+						<td>25 - 29.9</td>
+						<td>Передожиріння(гладкість)</td>
+					</tr>
+					<tr id="node4">
+						<td>30.0 - 34.9</td>
+						<td>Ожиріння I ступеня</td>
+					</tr>
+					<tr id="node5">
+						<td>35.0 - 39.9</td>
+						<td>Ожиріння IІ ступеня</td>
+					</tr>
+					<tr id="node6">
+						<td>Більше 40.0</td>
+						<td>Ожиріння IІІ ступеня</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<script src="js/calculate.js"></script>
+
+</body>
+
+</html>

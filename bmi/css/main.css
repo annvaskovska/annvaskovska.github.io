@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Source Sans Pro;
+    src: url(../css/font/SourceSansProRegular.ttf);
+}
+
+body {
+    font-family: Source Sans Pro;
+    background-color: #eee;
+    color: #50514F;
+    margin: 0;
+}
+
+.content {
+    background-color: #fff;
+    position: absolute;
+ 
+    width: 900px;
+    top: 9%;
+    left: 50%;
+   
+    margin-left: -458px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+    border-top: 1px solid #F25F5C;
+    border-bottom: 1px solid #F25F5C;
+}
+
+.header,
+.input,
+.table {
+    text-align: center;
+}
+
+.header-text {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.input-text {
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.input-height,
+.inout-weight {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-height {
+    font-size: 1.1em;
+    padding-right: 20px;
+}
+
+.span-weight {
+    font-size: 1.1em;
+    padding-right: 27px;
+}
+
+.calculate-button:focus,
+.calculate-button:active {
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active {
+    outline: none;
+    border: 1px solid #70C1B3;
+}
+
+input[type="text"] {
+    border: 1px solid #ECECEC;
+    height: 1.8em;
+    text-align: center;
+    font-family: Source Sans Pro;
+}
+
+.calculate {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calculate-button {
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    background-color: #F25F5C;
+    border: 2px solid #F25F5C;
+    color: white;
+    font-family: Source Sans Pro;
+    font-size: 1.8em;
+}
+
+#result {
+    color: #247BA0;
+    font-size: 1.8em;
+}
+
+table,
+th,
+td {
+    border-bottom: 1px solid #ccc;
+    color: #50514F;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+td {
+    width: 60%;
+}
+
+thead {
+    background-color: #70C1B3;
+}
+
+thead td {
+    color: #50514F;
+}
+
+.simple-bg {
+    background-color: #fff;
+}
+
+.highlight-bg {
+    background-color: #FFE066;
+}
+
+.error {
+    border: 1px solid #F25F5C !important
+}
+
+.valid {
+    border: 1px solid #ccc;
+}
