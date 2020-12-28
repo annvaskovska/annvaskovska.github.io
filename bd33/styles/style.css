@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: -1;
+}
+body {
+  background: #ffffff;
+  overflow: hidden;
+}
+.container {
+  display: none;
+  color: #CDDC39;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.congrats {
+  display: none;
+  justify-content: center;
+  width: 100%;
+}
