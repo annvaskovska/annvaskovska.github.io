@@ -51,7 +51,7 @@
   const hour = minute * 60;
   const day = hour * 24;
 
-  let countDown = new Date('Dec 28, 2020 22:43:40').getTime();
+  let countDown = new Date('Jan 03, 2021 00:00:00').getTime();
 
   const x = setInterval(function() {
     let now = new Date().getTime(),
